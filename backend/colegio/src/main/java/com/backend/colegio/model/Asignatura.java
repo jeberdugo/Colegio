@@ -27,7 +27,7 @@ public class Asignatura {
 	private Curso curso;
 	
 	@ManyToOne
-	@JsonManagedReference
+	@JsonIgnore
 	private Profesor profesor;
 
 	public Asignatura(int id, String nombre, List<Estudiante> estudiantes, Curso curso, Profesor profesor) {

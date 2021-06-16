@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card" id="profesores">
+        <div class="card-header">Seleccione el profesor</div>
+        <div class="card-body">
+          <h5 class="card-title">Profesores</h5>
+
+          <div class="input-group">
+            <select #mySelect (change)="navigateTo(mySelect.value)"
+              class="custom-select"
+              id="inputGroupSelect04"
+              aria-label="Example select with button addon"
+              
+            >
+              <option selected>Escoge un profesor</option>
+              <option *ngFor="let prof of profesores" value="{{prof.id}}">
+                {{ prof.nombre }}
+              </option>
+            </select>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

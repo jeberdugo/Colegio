@@ -14,9 +14,15 @@ export class ProfesoresListComponent implements OnInit {
   profesores: Profesor[];
   getProfesores(): void {
         this.profesoresService.getProfesores().subscribe(profesores => this.profesores = profesores);
+        console.log(this.profesores);
     }
 
   ngOnInit(): void {
+
+    console.log("hola");
+
+    this.getProfesores();
+    
   }
 
 }

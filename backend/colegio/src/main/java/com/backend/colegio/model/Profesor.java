@@ -20,7 +20,6 @@ public class Profesor {
 	private String nombre;
 
 	@OneToMany(mappedBy = "profesor")
-	@JsonBackReference
 	private List<Asignatura> asignaturas;
 
 	public Profesor(int id, String nombre, List<Asignatura> asignaturas) {

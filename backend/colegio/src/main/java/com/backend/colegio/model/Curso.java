@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 public class Curso {
@@ -21,9 +23,11 @@ public class Curso {
 	private String salon;
 	
 	@OneToMany(mappedBy = "curso")
+	@JsonIgnore
 	private List<Asignatura> asignaturas;
 	
 	@ManyToOne
+	@JsonIgnore
 	private Colegio colegio;
 
 	public Curso(int id, int grado, String salon, List<Asignatura> asignaturas, Colegio colegio) {
